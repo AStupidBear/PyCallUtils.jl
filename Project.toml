@@ -8,3 +8,9 @@ BSON = "fbb218c0-5317-5bc6-957e-2ee96dd4b1f0"
 PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
 Requires = "ae029012-a4dd-5104-9daa-d747884805df"
 SparseArrays = "2f01184e-e22b-5df5-ae63-d93ebab69eaf"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]

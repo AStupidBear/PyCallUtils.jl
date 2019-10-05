@@ -1,6 +1,7 @@
 module PyCallUtils
 
-using PyCall, Requires, SparseArrays, BSON
+using SparseArrays, Serialization, Random
+using PyCall, Requires, BSON
 using PyCall: jlWrapIteratorType, pyjlwrap_type!, pyincref_, pyjlwrap_iternext, pyjlwrap_new
 
 export @imports, @from, pytypename, pymodulename, pymat
