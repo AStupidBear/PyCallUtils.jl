@@ -33,3 +33,13 @@ x = sprand(100, 100, 0.5)
 using BSON
 BSON.@save "test.bson" x = np.sin
 ```
+
+### Make getindex/setindex! behave exactly like in python
+```
+@imports pandas as pd
+df = pd.DataFrame(Dict(:name => ["a", "b"], :age => [27, 30]))
+@assert df.loc[1, "age"] == 30
+sr = pd.Series([3, 5], index = [:a, :b])
+@assert all(sr.iloc[0:1] == sr)
+@assert all(sr.iloc[:] == sr)
+```
