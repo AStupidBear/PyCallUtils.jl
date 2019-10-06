@@ -1,4 +1,4 @@
-# Utility functions for [PyCall.jl](https://github.com/JuliaPy/PyCall.jl)
+# Extensions to PyCall.jl
 
 ## Installation
 
