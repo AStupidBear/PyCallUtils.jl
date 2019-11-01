@@ -3,8 +3,8 @@
 ## Installation
 
 ```julia
-julia>]
-pkg> add https://github.com/AStupidBear/PyCallUtils.jl.git
+using Pkg
+pkg"add PyCallUtils"
 ```
 
 ## Usage
