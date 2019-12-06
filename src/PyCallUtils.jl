@@ -84,8 +84,8 @@ end
 pytypename(obj) = obj.__class__.__name__
 pymodulename(obj) = obj.__class__.__module__
 
+pymat(x) = x
 pymat(x::AbstractArray) = PyReverseDims(reshape(x, size(x, 1), :))
-pymat(x::PyObject) = pytypename(x) == "DataFrame" ? x."values" : x
 
 function BSON.lower(x::PyObject)
     io = IOBuffer()
