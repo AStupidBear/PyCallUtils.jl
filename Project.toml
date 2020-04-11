@@ -1,7 +1,7 @@
 name = "PyCallUtils"
 uuid = "02651160-e6c3-11e9-0e2a-551f75d9519e"
 authors = ["Yao Lu <luyaocns@gmail.com>"]
-version = "0.2.1"
+version = "0.2.2"
 
 [deps]
 BSON = "fbb218c0-5317-5bc6-957e-2ee96dd4b1f0"
@@ -14,7 +14,7 @@ SparseArrays = "2f01184e-e22b-5df5-ae63-d93ebab69eaf"
 [compat]
 BSON = "0.2.4"
 PyCall = "1.90"
-Requires = "0.5.2"
+Requires = "0.5.2, 1"
 julia = "1"
 
 [extras]
