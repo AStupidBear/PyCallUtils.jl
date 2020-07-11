@@ -3,7 +3,7 @@ using PyCallUtils
 using SparseArrays
 using BSON
 using Test
-using PyCall: Python
+using PyCall: python
 
 @imports numpy as np
 @test np == pyimport("numpy")
