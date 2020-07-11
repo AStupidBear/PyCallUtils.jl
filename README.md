@@ -1,5 +1,9 @@
 # Extensions to PyCall.jl
 
+[![Build Status](https://travis-ci.com/AStupidBear/PyCallUtils.jl.svg?branch=master)](https://travis-ci.com/AStupidBear/PyCallUtils.jl)
+[![Build Status](https://ci.appveyor.com/api/projects/status/github/AStupidBear/PyCallUtils.jl?svg=true)](https://ci.appveyor.com/project/AStupidBear/PyCallUtils-jl)
+[![Coverage](https://codecov.io/gh/AStupidBear/PyCallUtils.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/AStupidBear/PyCallUtils.jl)
+
 ## Installation
 
 ```julia
