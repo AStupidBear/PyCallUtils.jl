@@ -3,6 +3,7 @@ using PyCallUtils
 using SparseArrays
 using BSON
 using Test
+using PyCall: Python
 
 @imports numpy as np
 @test np == pyimport("numpy")
@@ -11,7 +12,9 @@ using Test
 @test datetime == pyimport("datetime").datetime
 
 x = sprand(100, 100, 0.5)
-@test convert(SparseMatrixCSC, PyObject(x)) == x
+if occursin("scipy", read(`$python -m pip list`, String))
+    @test convert(SparseMatrixCSC, PyObject(x)) == x
+end
 
 @test pytypename(np.sin) == "ufunc"
 @test pymodulename(np.sin) == "numpy"
