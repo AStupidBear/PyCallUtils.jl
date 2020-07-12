@@ -11,8 +11,8 @@ using PyCall: python
 @from datetime imports datetime
 @test datetime == pyimport("datetime").datetime
 
-x = sprand(100, 100, 0.5)
 if occursin("scipy", read(`$python -m pip list`, String))
+    x = sprand(100, 100, 0.5)
     @test convert(SparseMatrixCSC, PyObject(x)) == x
 end
 
@@ -26,19 +26,21 @@ rm("test.bson")
 
 @test (np.sin ∘ np.cos)(1f0) == np.sin(np.cos(1f0))
 
-@imports pandas as pd
-
-df = pd.DataFrame(Dict(:name => ["a", "b"], :age => [27, 30]))
-@test df.loc[1, "age"] == 30
-
-sr = pd.Series([3, 5], index = [:a, :b])
-@test sr.a == 3
-@test sr["a"] == 3
-@test sr.loc["a"] == 3
-@test sr.b == 5
-@test sr.iloc[0] == 3
-@test sr.iloc[1] == 5
-@test length(sr) == 2
-@test sr.sum() == 8
-@test all(sr.iloc[0:1] == sr)
-@test all(sr.iloc[:] == sr)
+if occursin("pandas", read(`$python -m pip list`, String))
+    @imports pandas as pd
+    
+    df = pd.DataFrame(Dict(:name => ["a", "b"], :age => [27, 30]))
+    @test df.loc[1, "age"] == 30
+    
+    sr = pd.Series([3, 5], index = [:a, :b])
+    @test sr.a == 3
+    @test sr["a"] == 3
+    @test sr.loc["a"] == 3
+    @test sr.b == 5
+    @test sr.iloc[0] == 3
+    @test sr.iloc[1] == 5
+    @test length(sr) == 2
+    @test sr.sum() == 8
+    @test all(sr.iloc[0:1] == sr)
+    @test all(sr.iloc[:] == sr)
+end
