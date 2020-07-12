@@ -31,3 +31,4 @@ addons:
       - python3-setuptools
       - python3-numpy
       - python3-scipy
+      - python3-pandas
