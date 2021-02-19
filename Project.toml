@@ -12,7 +12,7 @@ Serialization = "9e88b42a-f829-5b0c-bbe9-9e923198166b"
 SparseArrays = "2f01184e-e22b-5df5-ae63-d93ebab69eaf"
 
 [compat]
-BSON = "0.2.4"
+BSON = "0.2.4, 0.3"
 PyCall = "1.90"
 Requires = "0.5.2, 1"
 julia = "1"
