@@ -1,7 +1,6 @@
 # Extensions to PyCall.jl
 
-[![Build Status](https://travis-ci.com/AStupidBear/PyCallUtils.jl.svg?branch=master)](https://travis-ci.com/AStupidBear/PyCallUtils.jl)
-[![Build Status](https://ci.appveyor.com/api/projects/status/github/AStupidBear/PyCallUtils.jl?svg=true)](https://ci.appveyor.com/project/AStupidBear/PyCallUtils-jl)
+[![Build Status](https://github.com/AStupidBear/PyCallUtils.jl/workflows/CI/badge.svg)](https://github.com/AStupidBear/PyCallUtils.jl/actions)
 [![Coverage](https://codecov.io/gh/AStupidBear/PyCallUtils.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/AStupidBear/PyCallUtils.jl)
 
 ## Installation
